@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Temperature</string>
+    <string name="temperature">Temperature</string>
+    <string name="what_s_the_temperature">What\'s the temperature?</string>
+    <string name="celcius">Celcius</string>
+    <string name="calculate">Calculate</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="roundoff_the_temperature">Roundoff the temperature?</string>
+    <string name="converted_temperature">Temperature = %s </string>
+</resources>

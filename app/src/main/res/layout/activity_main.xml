@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-165dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_sun"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/temperature"
+            app:layout_constraintEnd_toEndOf="@id/temperature"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/temperature"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:hint="@string/temperature"
+            app:layout_constraintStart_toEndOf="@id/icon_sun"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/temperature_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+        android:id="@+id/temperature_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/what_s_the_temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperature"/>
+    <RadioGroup
+        android:id="@+id/temperature_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperature_question">
+        <RadioButton
+            android:id="@+id/option_celcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celcius"/>
+
+
+
+
+        <RadioButton
+            android:id="@+id/option_fahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"/>
+        <RadioButton
+            android:id="@+id/option_kelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelvin"/>
+
+    </RadioGroup>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/roundoff_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Roundoff the temperature?"
+            android:checked = "true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/temperature_options"
+            app:layout_constraintTop_toBottomOf="@id/temperature_options"/>
+
+
+<Button
+    android:id="@+id/calculate_button"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="@string/calculate"
+    app:layout_constraintTop_toBottomOf="@id/roundoff_temperature"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button"
+       tools:text="temperature: 10"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
